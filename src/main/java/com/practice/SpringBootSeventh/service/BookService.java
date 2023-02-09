@@ -10,23 +10,23 @@ import com.practice.SpringBootSeventh.entities.Book;
 @Component
 public class BookService {
 
-	private static List<Book> bookList = new ArrayList<>();
+	private static List<Book> list = new ArrayList<>();
 	
 	static {
-		bookList.add(new Book(222,"DEF","Shyam"));
-		bookList.add(new Book(333,"GHI","Bhram"));
-		bookList.add(new Book(444,"JKL","Dharam"));
+		list.add(new Book(201,"svva","gvevesvserbsrb"));
+		list.add(new Book(301,"svvawfwf","klvjoevon"));
+		list.add(new Book(401,"svvmlva","kjviojeiovnpoan"));
 	}
 	
 	public List<Book> getAllBooks()
 	{
-		return bookList;
+		return list;
 	}
 	
 	public Book getBookById(int id)
 	{
 		Book book = null;
-		book = bookList.stream().filter(e->e.getId()==id).findFirst().get();
+		book = list.stream().filter(e->e.getId()==id).findFirst().get();
 		return book;
 	}
 }

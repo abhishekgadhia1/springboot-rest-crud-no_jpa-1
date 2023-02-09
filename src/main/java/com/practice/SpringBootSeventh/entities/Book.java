@@ -6,21 +6,16 @@ public class Book {
 	private String title;
 	private String author;
 
-	public Book(int id, String title, String author) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.author = author;
-	}
-
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", author=" + author + "]";
+	public Book(int id, String title, String author) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.author = author;
 	}
 
 	public int getId() {
@@ -45,6 +40,11 @@ public class Book {
 
 	public void setAuthor(String author) {
 		this.author = author;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + "]";
 	}
 
 }
