@@ -2,6 +2,7 @@ package com.practice.SpringBootSeventh.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -40,6 +41,19 @@ public class BookService {
 
 	public void deleteBook(int bid) {
 		list = list.stream().filter(book->book.getId()!=bid).collect(Collectors.toList());
+		
+	}
+
+	public void updateBook(Book book, int id) {
+		list = list.stream().map(b ->{
+			if(b.getId()==id)
+			{
+				b.setTitle(book.getTitle());
+				b.setAuthor(book.getAuthor());
+			}
+			return b;
+		}).collect(Collectors.toList());
+		
 		
 	}
 }
